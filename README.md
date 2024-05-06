@@ -1,0 +1,2 @@
+# typescript
+ sypescript-visualstudio
