@@ -16,7 +16,7 @@ const node_fetch_1 = __importDefault(require("node-fetch"));
 function getSunriseAndSunset(options) {
     return __awaiter(this, void 0, void 0, function* () {
         const { latitude, longitude } = options;
-        const apiResult = yield (0, node_fetch_1.default)(`https://api.sunrise-sunset.org/json?lat=${latitude}&long=${longitude}`);
+        const apiResult = yield (0, node_fetch_1.default)(`https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}`);
         const json = yield apiResult.json();
         return {
             sunrise: json.results.sunrise,

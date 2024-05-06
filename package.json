@@ -13,7 +13,7 @@
     "@koa/router": "^11.0.1",
     "koa": "^2.13.4",
     "node-fetch": "^2.6.7",
-    "nodemon": "^2.0.19"
+    "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "@types/koa": "^2.13.5",

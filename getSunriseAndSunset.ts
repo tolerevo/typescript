@@ -30,7 +30,7 @@ async function getSunriseAndSunset(options: Options): Promise<Response> {
   const { latitude, longitude } = options;
 
   const apiResult = await fetch(
-    `https://api.sunrise-sunset.org/json?lat=${latitude}&long=${longitude}`
+    `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}`
   );
   const json: ApiResponseJSON = await apiResult.json();
 
