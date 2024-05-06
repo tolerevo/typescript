@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 
 type Options = {
-  latitude: string;
-  longitude: string;
+  latitude: number;
+  longitude: number;
 };
 
 type ApiResponseJSON = {
@@ -28,6 +28,7 @@ type Response = {
 
 async function getSunriseAndSunset(options: Options): Promise<Response> {
   const { latitude, longitude } = options;
+
 
   const apiResult = await fetch(
     `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}`

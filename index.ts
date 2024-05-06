@@ -9,16 +9,16 @@ router.get('sunrise and sunset time', '/sunrise-and-sunset', async (ctx) => {
   const latitude = ctx.request.query.latitude;
   const longitude = ctx.request.query.longitude;
 
-  if (!latitude || !longitude) {
+  if (!latitude || !longitude ) {
     ctx.status = 500;
     ctx.body =
-      'Internal Server Error. Error: missing latitude or longitude query parameters.';
+      'Internal Server Error. Error: missing latitude or longitude or serveDate query parameters.';
     return;
   }
 
   const result = await getSunriseAndSunset({
-    latitude: String(latitude),
-    longitude: String(longitude),
+    latitude: Number(latitude),
+    longitude: Number(longitude),
   });
 
   ctx.status = 200;
